@@ -1,0 +1,346 @@
+:root {
+  --team-black: #070707;
+  --team-black-soft: #121212;
+  --team-red: #d90b1c;
+  --team-blue: #1737d6;
+  --team-blue-deep: #0a1e8a;
+  --team-ice: #f2f6ff;
+  --team-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rajdhani", sans-serif;
+  color: #0f1022;
+  background:
+    radial-gradient(circle at 14% 8%, #1f45ff2b 0%, transparent 35%),
+    radial-gradient(circle at 90% 18%, #d90b1c26 0%, transparent 32%),
+    linear-gradient(180deg, #f7f9ff 0%, #eef2ff 100%);
+}
+
+h1,
+h2,
+h3,
+.logo,
+.button,
+.roster-card span {
+  font-family: "Graduate", serif;
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 1.2rem 1.2rem 4rem;
+  color: var(--team-white);
+  background: linear-gradient(135deg, var(--team-black), var(--team-black-soft) 45%, var(--team-blue-deep) 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  aspect-ratio: 1;
+  right: -140px;
+  top: -120px;
+  background: radial-gradient(circle, #d90b1c73, transparent 70%);
+  pointer-events: none;
+}
+
+.top-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  color: var(--team-white);
+  font-size: 1.1rem;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 4rem auto 0;
+}
+
+h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.hero p {
+  font-size: 1.13rem;
+  max-width: 62ch;
+}
+
+.hero-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.66rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--team-red);
+  color: var(--team-white);
+  font-size: 0.87rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+.button.ghost {
+  background: transparent;
+  border-color: #ffffff73;
+  color: var(--team-white);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.2rem 1.2rem 4rem;
+}
+
+section {
+  margin-top: 2.6rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  margin: 0 0 1rem;
+  color: #111a3a;
+}
+
+.roster-header,
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.9rem;
+}
+
+.roster-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: #12172d;
+  background: linear-gradient(180deg, #ffffff, #f5f7ff);
+  border: 1px solid #d7defd;
+  border-left: 5px solid var(--team-blue);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px #0f1d5f14;
+  padding: 0.95rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.roster-card span {
+  color: var(--team-red);
+  font-size: 0.86rem;
+}
+
+.roster-card:hover,
+.roster-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 24px #0f1d5f21;
+  border-color: #bfc9ff;
+  outline: none;
+}
+
+.season-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.season-card,
+.game-card,
+.photo-card {
+  display: block;
+  background: linear-gradient(180deg, #fff, #f6f8ff);
+  border: 1px solid #d6ddfb;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px #0f1d5f14;
+}
+
+.season-card {
+  text-decoration: none;
+  color: #12172d;
+  border-left: 5px solid var(--team-blue);
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.game-card {
+  text-decoration: none;
+  color: #12172d;
+  border-left: 5px solid var(--team-red);
+  padding: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.game-card:hover,
+.game-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px #0f1d5f24;
+  border-color: #bfc9ff;
+  outline: none;
+}
+
+.season-card span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--team-red);
+  font-family: "Graduate", serif;
+  font-size: 0.86rem;
+}
+
+.game-label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--team-blue);
+  font-family: "Graduate", serif;
+  font-size: 0.86rem;
+}
+
+.game-card h3 {
+  margin: 0 0 0.45rem;
+  color: #111a3a;
+}
+
+.game-card p {
+  margin: 0;
+  font-weight: 600;
+  color: #45507e;
+}
+
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.photo-card {
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transform: translateY(18px);
+  opacity: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.45s ease;
+}
+
+.photo-card.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.photo-card:hover,
+.photo-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px #0f1d5f24;
+  outline: none;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card figcaption {
+  font-weight: 700;
+  padding: 0.85rem;
+}
+
+dialog {
+  width: min(86vw, 760px);
+  border: 2px solid #d6ddfb;
+  border-radius: 18px;
+  padding: 1rem;
+  background: #fbfcff;
+}
+
+dialog::backdrop {
+  background: #000a;
+}
+
+.close {
+  border: 1px solid #bfcbff;
+  background: #f0f3ff;
+  color: #14215d;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+#lightboxImage {
+  width: 100%;
+  max-height: 62vh;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 0.7rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(180deg, #0a0a0a, #171717);
+  color: #dbe2ff;
+  border-top: 3px solid var(--team-red);
+}
+
+@media (max-width: 600px) {
+  .roster-header,
+  .gallery-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 0.96rem;
+  }
+
+  .photo-card img {
+    height: 200px;
+  }
+}
